@@ -6,6 +6,10 @@ public class App {
         var cm = new VisualizadorDeMedia(dados.getValores());
         var cs = new VisualizadorDeSomatorio(dados.getValores());
 
+        // Inscrevendo os visualizadores (ativando-os)
+        dados.inscreve(cm);
+        dados.inscreve(cs);
+
         Scanner s = new Scanner(System.in);
         int valor = 0;
         while(true){
@@ -14,12 +18,11 @@ public class App {
             if (valor == 0){
                 break;
             }
+
+            // Apenas adicionamos o dado; o Observer faz o resto
             dados.add(valor);
-            cs.acrescentaValor(valor);
-            cm.acrescentaValor(valor);
-            cs.exibeSomatorio();
-            cm.exibeMedia();
         }
         System.out.println("Fim");
+        s.close();
     }
 }
