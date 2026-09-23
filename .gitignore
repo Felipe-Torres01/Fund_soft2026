@@ -1,33 +1,97 @@
-HELP.md
+# Java / JVM
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.log
+hs_err_pid*
+replay_pid*
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+bin/
+out/
+build/
+.gradle/
+.gradle-cache/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDEs (IntelliJ, Eclipse, NetBeans, STS)
+.idea/
 *.iml
 *.ipr
-
-### NetBeans ###
+*.iws
+.project
+.classpath
+.settings/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# VS Code (Ignora arquivos locais, mas mantém configurações do time)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Dev Containers
+!.devcontainer/
+!.devcontainer/devcontainer.json
+!.devcontainer/Dockerfile
+
+# Vaadin
+node_modules/
+frontend/generated/
+src/main/frontend/generated/
+src/main/bundles/
+src/main/resources/META-INF/VAADIN/
+vite.generated.ts
+types.d.ts
+package-lock.json
+pnpm-lock.yaml
+webpack.generated.js
+webpack.config.js
+webpack.generated.config.js
+
+# Node / JS / Python / Docker
+npm-debug.log*
+yarn-debug.log*
+.venv/
+venv/
+env/
+__pycache__/
+.docker/
+*.env
+.env
+!.env.example
+
+# OS / Logs / Temporários
+.DS_Store
+Thumbs.db
+desktop.ini
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# Configurações locais da aplicação
+application-local.yml
+application-local.yaml
+application-dev.yml
+application-dev.yaml
